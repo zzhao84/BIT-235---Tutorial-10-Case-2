@@ -5,8 +5,8 @@
    Tutorial 10
    Case Problem 2
 
-   Author: 
-   Date:   
+   Author: Zack Zhao
+   Date:   2022-10-30
    
    Filename: vw_results.js
    
