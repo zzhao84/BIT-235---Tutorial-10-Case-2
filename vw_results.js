@@ -44,8 +44,7 @@ for (var i = 0; i < race.length; i++) {
    reportHTML += candidateRows(i, totalVotes);
    
    // Add the text "</table>" to value of reportHTML variable
-   reportHTML += "</table>";
-   
+   reportHTML += "</table>";   
 }
 
 /* Write value of reportHTML variable into innerHTML of first and only section element */
@@ -75,12 +74,18 @@ function candidateRows(raceNum, totalVotes) {
       // Add HTML code to value of rowHTML variable 
       rowHTML += "<tr><td>" + candidateName + "(" + candidateParty + ")" + "</td>\
       <td>" + candidateVotes.toLocaleString() + "(" + candidatePercent.toFixed(1) + ")" + "</td>";
-
+   
+      // Add empty data cells to race results table
+      for (var k = 0; k < candidatePercent; k++) {
+         rowHTML += createBar(candidateParty, candidatePercent);
+      }
+   
+      // Adding the HTML code "</tr>" to the rowHTML variable
+      rowHTML += "</tr>";
    }
       
       // Return value of rowHTML variable
       return rowHTML;
-
 }
    
 /* Callback Function to calculate an array sum */
@@ -93,3 +98,21 @@ function calcPercent(value, sum) {
    return (100*value/sum);
 }
 
+/* Function to display vote percentages as bar charts */
+function createBar(partyType) {
+   
+   // Variable containing HTML code
+   var barHTML = "";
+   
+   // Switch/case statement to test value of partyType
+   switch (partyType) {
+      case "D": "<td class='dem'></td>"; break;
+      case "R": "<td class='rep'></td>"; break;
+      case "I": "<td class='ind'></td>"; break;
+   }
+         
+   // Return value of barHTML
+   return barHTML;
+}
+
+      
