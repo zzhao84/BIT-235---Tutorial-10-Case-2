@@ -38,9 +38,9 @@ for (var i = 0; i < race.length; i++) {
    
    // Add HTML text to value of reportHTML variable to write name of current race in program loop
    reportHTML += "<table><caption>" + race[i] + "</caption>\
-   <tr><th>Candidate</th><the>Votes</th></tr>"; 
+   <tr><th>Candidate</th><th>Votes</th></tr>"; 
 
-   // Call candidateRows function to add returned value to value of reportHTML variable
+   // Call candidateRows() function to add returned value to value of reportHTML variable
    reportHTML += candidateRows(i, totalVotes);
    
    // Add the text "</table>" to value of reportHTML variable
@@ -51,8 +51,8 @@ for (var i = 0; i < race.length; i++) {
 /* Write value of reportHTML variable into innerHTML of first and only section element */
 document.getElementsByTagName("section")[0].innerHTML = reportHTML;
 
-/* candidateRows function */
-function candidateRows(raceNum, totalvotes) {
+/* candidateRows() function */
+function candidateRows(raceNum, totalVotes) {
    
    // Variable containing HTML code for the table row
    var rowHTML = "";
@@ -73,11 +73,11 @@ function candidateRows(raceNum, totalvotes) {
       var candidatePercent = calcPercent(candidateVotes, totalVotes);
       
       // Add HTML code to value of rowHTML variable 
-      rowHTML += "<tr><td>" + candidateName + " (" + candidateParty + ") + "</td>\
-      <td>" + candidateVotes.toLocaleString() + " (" + candidatePercent.toFixed(1) + ")" + "</td>";
+      rowHTML += "<tr><td>" + candidateName + "(" + candidateParty + ")" + "</td>\
+      <td>" + candidateVotes.toLocaleString() + "(" + candidatePercent.toFixed(1) + ")" + "</td>";
 
       // Return value of rowHTML variable
-      return rowHTML
+      return rowHTML;
 
 /* Callback Function to calculate an array sum */
 function calcSum(value) {
