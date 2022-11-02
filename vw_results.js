@@ -76,9 +76,13 @@ function candidateRows(raceNum, totalVotes) {
       rowHTML += "<tr><td>" + candidateName + "(" + candidateParty + ")" + "</td>\
       <td>" + candidateVotes.toLocaleString() + "(" + candidatePercent.toFixed(1) + ")" + "</td>";
 
+   }
+      
       // Return value of rowHTML variable
       return rowHTML;
 
+}
+   
 /* Callback Function to calculate an array sum */
 function calcSum(value) {
    totalVotes += value;
