@@ -104,11 +104,11 @@ function createBar(partyType) {
    // Variable containing HTML code
    var barHTML = "";
    
-   // Switch/case statement to test value of partyType
+   // Statement to test value of partyType
    switch (partyType) {
-      case "D": "<td class='dem'></td>"; break;
-      case "R": "<td class='rep'></td>"; break;
-      case "I": "<td class='ind'></td>"; break;
+      case "D": barHTML = "<td class='dem'></td>"; break;
+      case "R": barHTML = "<td class='rep'></td>"; break;
+      case "I": barHTML = "<td class='ind'></td>"; break;
    }
          
    // Return value of barHTML
