@@ -31,7 +31,7 @@ var reportHTML = "<h1>" + raceTitle + "</h1>";
 for (var i = 0; i < race.length; i++) {
    
    // Variable storing total votes cast in each race
-   var totalVotes = 0
+   var totalVotes = 0;
 
    // Calculate total votes cast in current race
    votes[i].forEach(calcSum);
